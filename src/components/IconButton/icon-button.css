@@ -1,0 +1,9 @@
+.icon-button {
+  all: unset;
+  transition: 0.25s;
+}
+
+.icon-button:hover {
+  color: var(--red);
+  cursor: pointer;
+}

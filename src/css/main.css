@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brown: #685044;
+  --red: #bb4430;
+  --whitepink: #f9dec9;
+  --font1: "Holtwood One SC", serif;
+  --font2: "Josefin Sans", sans-serif;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 50px 10px;
+  position: relative;
+}
