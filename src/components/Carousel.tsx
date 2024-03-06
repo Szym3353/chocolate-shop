@@ -4,7 +4,7 @@ import "../css/carousel.css";
 export default function Carousel<T>({
   data,
   Component,
-  inView = 4,
+  inView = 5,
 }: {
   data: T[];
   Component: React.FC<any>;
@@ -13,21 +13,60 @@ export default function Carousel<T>({
   let [currentInView, setCurrentInView] = React.useState(inView);
   let [elementWidth, setElementWidth] = React.useState<number>(300);
   let containerRef = React.useRef<HTMLDivElement | null>(null);
-  let padding = 20;
-  let margin = 20;
-  let totalGap = (currentInView - 1) * 20;
+
+  let gap = 10;
+
+  function updateElementWidth() {
+    if (!containerRef.current) return;
+    setElementWidth(
+      (containerRef.current.offsetWidth - currentInView * gap) / currentInView
+    );
+  }
+
+  function updateInView() {
+    if (!containerRef.current) return;
+    let allowedWidth = containerRef.current.offsetWidth - currentInView * gap;
+    let allowedElements = Math.floor(allowedWidth / elementWidth);
+    if (currentInView > 1 && allowedElements < inView) {
+      setCurrentInView(allowedElements);
+    }
+  }
+
+  function scroll(value: -1 | 1) {
+    if (!containerRef.current) return;
+    containerRef.current.scrollBy({
+      left: value * (elementWidth + gap),
+      behavior: "smooth",
+    });
+  }
 
   React.useEffect(() => {
     if (!containerRef.current) return;
+    updateElementWidth();
+    updateInView();
 
-    setElementWidth(
-      (containerRef.current.offsetWidth - padding - totalGap) / currentInView
-    );
+    window.addEventListener("resize", () => {
+      if (!containerRef.current) return;
+      updateElementWidth();
+
+      let allowedWidth = containerRef.current.offsetWidth - currentInView * gap;
+      let allowedElements = Math.floor(allowedWidth / elementWidth);
+
+      if (currentInView > 1 && allowedElements <= inView) {
+        if (!containerRef.current) return;
+        setElementWidth(
+          (containerRef.current.offsetWidth - allowedElements * gap) /
+            allowedElements
+        );
+        setCurrentInView(allowedElements);
+      }
+    });
 
     containerRef.current.addEventListener("scroll", () => {
       if (!containerRef.current) return;
+      let currentElementView = containerRef.current.offsetWidth / currentInView;
 
-      if (containerRef.current.scrollLeft <= 0) {
+      if (containerRef.current.scrollLeft <= 10) {
         containerRef.current.scrollLeft = containerRef.current.scrollWidth / 2;
       } else if (
         containerRef.current.scrollLeft >=
@@ -35,7 +74,7 @@ export default function Carousel<T>({
       ) {
         containerRef.current.scrollLeft =
           containerRef.current.scrollWidth / 2 -
-          4 * (elementWidth + padding + margin);
+          currentInView * currentElementView;
       }
     });
   }, []);
@@ -45,25 +84,14 @@ export default function Carousel<T>({
     containerRef.current.scrollLeft = containerRef.current.scrollWidth / 2;
   }, [elementWidth]);
 
-  function scrollLeft() {
+  React.useEffect(() => {
     if (!containerRef.current) return;
-    containerRef.current.scrollBy({
-      left: -(elementWidth + padding),
-      behavior: "smooth",
-    });
-  }
-
-  function scrollRight() {
-    if (!containerRef.current) return;
-    containerRef.current.scrollBy({
-      left: elementWidth + padding,
-      behavior: "smooth",
-    });
-  }
+    updateElementWidth();
+  }, [currentInView]);
 
   return (
     <div className="carousel">
-      <button onClick={scrollLeft}>Prev</button>
+      <button onClick={() => scroll(-1)}>Prev</button>
       <div ref={containerRef} className="carousel-inner">
         {data.map((item, index) => (
           <div
@@ -75,7 +103,7 @@ export default function Carousel<T>({
           </div>
         ))}
       </div>
-      <button onClick={scrollRight}>Next</button>
+      <button onClick={() => scroll(1)}>Next</button>
     </div>
   );
 }
