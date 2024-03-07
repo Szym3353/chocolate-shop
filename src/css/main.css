@@ -12,8 +12,11 @@ body {
 
 :root {
   --brown: #685044;
+  --brownRGB: 104, 80, 68;
   --red: #bb4430;
+  --redRGB: 187, 68, 48;
   --whitepink: #f9dec9;
+  --whitepinkRGB: 249, 222, 201;
   --font1: "Holtwood One SC", serif;
   --font2: "Josefin Sans", sans-serif;
 }

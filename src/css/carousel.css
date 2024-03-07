@@ -1,3 +1,9 @@
+.carousel {
+  display: flex;
+  position: relative;
+  gap: 0px;
+}
+
 .carousel-inner {
   display: flex;
   width: auto;
@@ -5,9 +11,27 @@
   overflow-y: hidden;
   overflow-x: hidden;
   gap: 10px;
+  padding: 10px 0;
 }
 
 .carousel-item {
   display: flex;
   justify-content: center;
+}
+
+.carousel > button {
+  all: unset;
+  font-size: 30px;
+  font-family: var(--font2);
+  font-weight: 700;
+  color: var(--red);
+  padding: 10px;
+  transition: 0.2s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel > button:hover {
+  background-color: rgba(var(--redRGB), 0.8);
+  color: var(--whitepink);
 }

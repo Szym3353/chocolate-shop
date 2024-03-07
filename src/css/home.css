@@ -78,13 +78,6 @@
   font-size: 28px;
 }
 
-.carousel {
-  display: flex;
-  overflow: scroll;
-  position: relative;
-  gap: 40px;
-}
-
 .home-carousel-card {
   display: flex;
   border: 1px solid #edebeb;

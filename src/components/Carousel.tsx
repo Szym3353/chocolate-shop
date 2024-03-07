@@ -12,6 +12,7 @@ export default function Carousel<T>({
 }) {
   let [currentInView, setCurrentInView] = React.useState(inView);
   let [elementWidth, setElementWidth] = React.useState<number>(300);
+  let [scrollBlock, setScrollBlock] = React.useState(false);
   let containerRef = React.useRef<HTMLDivElement | null>(null);
 
   let gap = 10;
@@ -33,11 +34,16 @@ export default function Carousel<T>({
   }
 
   function scroll(value: -1 | 1) {
-    if (!containerRef.current) return;
+    if (!containerRef.current || scrollBlock) return;
     containerRef.current.scrollBy({
       left: value * (elementWidth + gap),
       behavior: "smooth",
     });
+
+    setScrollBlock(true);
+    setTimeout(() => {
+      setScrollBlock(false);
+    }, 500);
   }
 
   React.useEffect(() => {
@@ -91,7 +97,7 @@ export default function Carousel<T>({
 
   return (
     <div className="carousel">
-      <button onClick={() => scroll(-1)}>Prev</button>
+      <button onClick={() => scroll(-1)}>&lt;</button>
       <div ref={containerRef} className="carousel-inner">
         {data.map((item, index) => (
           <div
@@ -103,7 +109,7 @@ export default function Carousel<T>({
           </div>
         ))}
       </div>
-      <button onClick={() => scroll(1)}>Next</button>
+      <button onClick={() => scroll(1)}>&gt;</button>
     </div>
   );
 }
