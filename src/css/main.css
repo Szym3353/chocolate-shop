@@ -22,9 +22,9 @@ body {
 }
 
 .page-container {
+  padding: 20px 0px 10px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 20px 50px 10px;
-  position: relative;
+  /* width: 100vw; */
 }

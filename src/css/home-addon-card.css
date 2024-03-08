@@ -1,0 +1,65 @@
+.addon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-basis: 450px;
+}
+
+.addon-card__img {
+  width: 220px;
+  height: 270px;
+  border-radius: 6px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.24);
+  margin: 0px 17px 24px;
+}
+
+.addon-card__title {
+  font-family: var(--font1);
+  font-size: 20px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.addon-card__text {
+  font-family: var(--font2);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.addon-card:first-child,
+.addon-card:last-child {
+  align-items: flex-start;
+  transform: translateY(-25px);
+}
+
+.addon-card:first-child {
+  flex-direction: row;
+  text-align: left;
+}
+
+.addon-card:last-child {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+@media screen and (max-width: 1500px) {
+  .addon-card {
+    flex-basis: 300px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .addon-card:nth-child(2n-1) {
+    transform: none;
+    flex-direction: row;
+    text-align: left;
+  }
+  .addon-card:nth-child(2n) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
