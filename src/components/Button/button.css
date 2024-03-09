@@ -1,0 +1,16 @@
+.button {
+  all: unset;
+  background-color: var(--red);
+  color: var(--whitepink);
+  border-radius: 10px;
+  padding: 14px 25px;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.24);
+  font-size: 20px;
+  font-family: var(--font2);
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(var(--redRGB), 0.7);
+}

@@ -1,15 +1,12 @@
 import "../css/navbar.css";
 import IconButton from "./IconButton/IconButton";
+import Logo from "./Logo";
 
 export default function Navbar() {
   return (
     <nav className="nav">
       <div className="navbar__row">
-        <div className="navbar__logo">
-          <p>Choco</p>
-          <img src="/ch1ocolate.png" alt="logo img" />
-          <p>Fiesta</p>
-        </div>
+        <Logo />
         <div className="navbar__icons">
           <IconButton icon="shopping_cart" />
           <IconButton icon="favorite" />
