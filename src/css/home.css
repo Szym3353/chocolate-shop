@@ -178,3 +178,20 @@
     gap: 40px;
   }
 }
+
+/*More info section*/
+.more-info-section {
+  padding: 100px 111px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  row-gap: 90px;
+}
+
+.more-info-section > img {
+  height: 574px;
+  width: 423px;
+  object-fit: cover;
+  object-position: center;
+  grid-row: span 2;
+}

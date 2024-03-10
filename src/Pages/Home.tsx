@@ -1,6 +1,7 @@
 import Carousel from "../components/Carousel";
 import HomeAddonCard, { AddonType } from "../components/Home/HomeAddonCard";
 import { HomeCard, carouselCards } from "../components/Home/HomeCard";
+import HomeMoreInfo from "../components/Home/HomeMoreInfo";
 import "../css/home.css";
 
 export default function Home() {
@@ -59,6 +60,18 @@ export default function Home() {
         <img
           src="crafty-pink-spiral-confetti.png"
           className="addons-section__confetti"
+        />
+      </section>
+      <section className="more-info-section">
+        <img src="ly-le-minh-jF3zJ1EFuNM-unsplash.jpg" />
+        <HomeMoreInfo
+          title="Tytuł"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."
+        />
+        <img src="luiz-paulo-r-santos-mhi10r2L0fA-unsplash.jpg" />
+        <HomeMoreInfo
+          title="Tytuł"
+          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."
         />
       </section>
     </main>
