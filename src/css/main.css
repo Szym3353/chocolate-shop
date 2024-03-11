@@ -19,6 +19,8 @@ body {
   --whitepinkRGB: 249, 222, 201;
   --font1: "Holtwood One SC", serif;
   --font2: "Josefin Sans", sans-serif;
+
+  --mainHorizontalPadding: 50px;
 }
 
 .page-container {
@@ -27,4 +29,10 @@ body {
   display: flex;
   flex-direction: column;
   /* width: 100vw; */
+}
+
+@media screen and (max-width: 550px) {
+  :root {
+    --mainHorizontalPadding: 20px;
+  }
 }
