@@ -63,16 +63,19 @@ export default function Home() {
         />
       </section>
       <section className="more-info-section">
-        <img src="ly-le-minh-jF3zJ1EFuNM-unsplash.jpg" />
-        <HomeMoreInfo
-          title="Tytuł"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."
-        />
-        <img src="luiz-paulo-r-santos-mhi10r2L0fA-unsplash.jpg" />
-        <HomeMoreInfo
-          title="Tytuł"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."
-        />
+        <h3>More about us</h3>
+        <div className="more-info-section__grid">
+          <img src="ly-le-minh-jF3zJ1EFuNM-unsplash.jpg" />
+          <HomeMoreInfo
+            title="Tytuł"
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."
+          />
+          <img src="luiz-paulo-r-santos-mhi10r2L0fA-unsplash.jpg" />
+          <HomeMoreInfo
+            title="Tytuł"
+            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."
+          />
+        </div>
       </section>
     </main>
   );
