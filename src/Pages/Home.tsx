@@ -9,17 +9,17 @@ export default function Home() {
     {
       title: "Kwiaty",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquid, laboriosam quasi, natus assumenda autem ullam libero doloremque dolor, modi at cumque nemo voluptatibus cupiditate?",
-      imgSrc: "bukiet.jpg",
+      imgSrc: "bukiet.webp",
     },
     {
       title: "Wina",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquid, laboriosam quasi, natus assumenda autem ullam libero doloremque dolor, modi at cumque nemo voluptatibus cupiditate?",
-      imgSrc: "winka.jpg",
+      imgSrc: "winka.webp",
     },
     {
       title: "Upominki",
       text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquid, laboriosam quasi, natus assumenda autem ullam libero doloremque dolor, modi at cumque nemo voluptatibus cupiditate?",
-      imgSrc: "bear.jpg",
+      imgSrc: "bear.webp",
     },
   ];
 
@@ -30,7 +30,7 @@ export default function Home() {
           <h1 className="head-section__text">Pozwól sobie na slodka rozkosz</h1>
           <div className="divider">
             <div className="divider__line" />
-            <img src="/chocolate2.png" />
+            <img src="/chocolate2.webp" alt="chocolate icon" />
             <div className="divider__line" />
           </div>
           <div className="head-section__buttons">
@@ -54,12 +54,12 @@ export default function Home() {
           ))}
         </div>
         <img
-          src="crafty-pink-spiral-confetti.png"
+          src="crafty-pink-spiral-confetti.webp"
           className="addons-section__confetti"
           alt="background confetti image"
         />
         <img
-          src="crafty-pink-spiral-confetti.png"
+          src="crafty-pink-spiral-confetti.webp"
           className="addons-section__confetti"
           alt="background confetti image"
         />
@@ -68,7 +68,7 @@ export default function Home() {
         <h3>More about us</h3>
         <div className="more-info-section__grid">
           <img
-            src="ly-le-minh-jF3zJ1EFuNM-unsplash.jpg"
+            src="ly-le-minh-jF3zJ1EFuNM-unsplash.webp"
             alt="Choco tree photo"
           />
           <HomeMoreInfo
@@ -76,7 +76,7 @@ export default function Home() {
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."
           />
           <img
-            src="luiz-paulo-r-santos-mhi10r2L0fA-unsplash.jpg"
+            src="luiz-paulo-r-santos-mhi10r2L0fA-unsplash.webp"
             alt="Gift photo"
           />
           <HomeMoreInfo
