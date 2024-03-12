@@ -52,6 +52,13 @@
   }
 }
 
+@media screen and (max-width: 800px) {
+  .addon-card__img {
+    width: 150px;
+    height: 200px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .addon-card:nth-child(2n-1) {
     transform: none;

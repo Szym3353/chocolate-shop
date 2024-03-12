@@ -101,7 +101,7 @@ export default function Carousel<T>({
       <div ref={containerRef} className="carousel-inner">
         {data.map((item, index) => (
           <div
-            key={index}
+            key={`carousel-element-${index}`}
             className="carousel-item"
             style={{ minWidth: elementWidth }}
           >

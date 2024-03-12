@@ -31,6 +31,7 @@
   font-family: var(--font1);
   color: var(--whitepink);
   font-size: 35px;
+  text-align: center;
 }
 
 .divider {
@@ -64,6 +65,21 @@
 
 .head-section__buttons > button + button {
   margin-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .head-section__text {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .head-section__buttons > button {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  .head-section__buttons > button + button {
+    margin-left: 40px;
+  }
 }
 
 .head-section__blob {
@@ -206,6 +222,9 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .more-info-section {
+    padding: 50px;
+  }
   .more-info-section__grid {
     grid-template-columns: auto;
   }

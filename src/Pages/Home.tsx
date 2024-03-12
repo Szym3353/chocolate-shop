@@ -49,8 +49,8 @@ export default function Home() {
           Doskonałe dodatki do prezentów
         </h2>
         <div className="addons-section__grid">
-          {addons.map((addon) => (
-            <HomeAddonCard {...addon} />
+          {addons.map((addon, index) => (
+            <HomeAddonCard key={`addons-section__card-${index}`} {...addon} />
           ))}
         </div>
         <img
