@@ -9,7 +9,7 @@ export type AddonType = {
 export default function HomeAddonCard({ title, text, imgSrc }: AddonType) {
   return (
     <div className="addon-card">
-      <img src={imgSrc} className="addon-card__img" />
+      <img src={imgSrc} className="addon-card__img" alt={`addons-${title}`} />
       <div className="addon-card__text-content">
         <h6 className="addon-card__title">{title}</h6>
         <p className="addon-card__text">{text}</p>

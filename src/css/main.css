@@ -13,7 +13,8 @@ body {
 :root {
   --brown: #685044;
   --brownRGB: 104, 80, 68;
-  --red: #bb4430;
+  /* --red: #bb4430; */
+  --red: #9a3628;
   --redRGB: 187, 68, 48;
   --whitepink: #f9dec9;
   --whitepinkRGB: 249, 222, 201;

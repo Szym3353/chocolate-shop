@@ -56,21 +56,29 @@ export default function Home() {
         <img
           src="crafty-pink-spiral-confetti.png"
           className="addons-section__confetti"
+          alt="background confetti image"
         />
         <img
           src="crafty-pink-spiral-confetti.png"
           className="addons-section__confetti"
+          alt="background confetti image"
         />
       </section>
       <section className="more-info-section">
         <h3>More about us</h3>
         <div className="more-info-section__grid">
-          <img src="ly-le-minh-jF3zJ1EFuNM-unsplash.jpg" />
+          <img
+            src="ly-le-minh-jF3zJ1EFuNM-unsplash.jpg"
+            alt="Choco tree photo"
+          />
           <HomeMoreInfo
             title="Tytuł"
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."
           />
-          <img src="luiz-paulo-r-santos-mhi10r2L0fA-unsplash.jpg" />
+          <img
+            src="luiz-paulo-r-santos-mhi10r2L0fA-unsplash.jpg"
+            alt="Gift photo"
+          />
           <HomeMoreInfo
             title="Tytuł"
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, dolorem illum deserunt soluta sapiente, cumque earum voluptate est officia, odit corrupti voluptates praesentium voluptatibus debitis."

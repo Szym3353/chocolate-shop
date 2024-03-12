@@ -104,7 +104,11 @@ export function HomeCard({
 }: CardI) {
   return (
     <div className="home-carousel-card">
-      <img className="home-carousel-card__image" src={imgSrc} />
+      <img
+        alt={`newest card - ${name}`}
+        className="home-carousel-card__image"
+        src={imgSrc}
+      />
       <p className="home-carousel-card__name">{name}</p>
       <p className="home-carousel-card__categories">
         {categories.map((category) => category)}
