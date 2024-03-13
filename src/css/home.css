@@ -48,6 +48,7 @@
 
 .divider > img {
   width: 30px;
+  height: 30px;
   margin: 0px 12px;
 }
 
@@ -122,6 +123,7 @@
 
 .home-carousel-card__image {
   height: 150px;
+  width: 150px;
 }
 
 .home-carousel-card__name {
