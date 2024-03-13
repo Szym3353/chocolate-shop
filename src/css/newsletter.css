@@ -41,5 +41,6 @@
 .newsletter__text {
   width: 100%;
   margin-bottom: 15px;
-  color: rgba(var(--brownRGB), 0.76);
+  /* color: rgba(var(--brownRGB), 0.76); */
+  color: var(--brown);
 }

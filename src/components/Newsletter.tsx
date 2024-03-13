@@ -6,7 +6,7 @@ export default function NewsLetter() {
     <div className="newsletter">
       <h6 className="newsletter__header">Subscribe to our newsletter</h6>
       <label htmlFor="newsletter-email">Your email address: </label>
-      <input type="email" name="newsletter-email" />
+      <input type="email" id="newsletter-email" />
       <p className="newsletter__text">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam unde
         odio sit et, corporis vitae quasi porro, eaque modi tempora est maiores

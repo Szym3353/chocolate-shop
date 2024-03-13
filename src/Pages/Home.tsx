@@ -27,6 +27,11 @@ export default function Home() {
     <main>
       <div className="padding-container">
         <section className="head-section">
+          <img
+            fetchPriority="high"
+            src="/jessica-johnston-P86sBT225NU-unsplash.webp"
+            alt="Head section background - box of chocolate"
+          />
           <h1 className="head-section__text">Pozwól sobie na slodka rozkosz</h1>
           <div className="divider">
             <div className="divider__line" />
